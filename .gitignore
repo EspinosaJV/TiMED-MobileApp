@@ -22,3 +22,19 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Flutter .gitignore template
+.idea/
+.dart_tool/
+.packages
+*.iml
+pubspec.lock
+build/
+ios/Flutter/Generated.xcconfig
+
+# Kotlin .gitignore template
+*.class
+*.jar 
+/build 
+/.idea 
+*.iml
