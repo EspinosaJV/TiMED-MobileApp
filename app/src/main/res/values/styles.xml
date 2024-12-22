@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Application Theme -->
+    <style name="Theme.Timed" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Background color -->
+        <item name="android:windowBackground">@color/primaryBackgroundColor</item>
+
+        <!-- Text Color -->
+        <item name="android:textColor">@color/secondaryTextColor</item>
+
+        <!-- Action bar colors -->
+        <item name="colorPrimary">@color/primaryBackgroundColor</item>
+        <item name="colorPrimaryDark">@color/primaryBackgroundColor</item>
+        <item name="colorAccent">@color/secondaryTextColor</item>
+    </style>
+</resources>
