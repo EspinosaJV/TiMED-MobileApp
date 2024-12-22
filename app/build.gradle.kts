@@ -53,20 +53,20 @@ android {
 }
 
 dependencies {
-    
     // Compose BOM for consistent versions
     implementation(platform("androidx.compose:compose-bom:2024.04.00"))
     implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.material3:material3")
     implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
     implementation("androidx.activity:activity-compose")
+
+    // Material Design Icons
+    implementation("androidx.compose.material:material-icons-core")
+    implementation("androidx.compose.material:material-icons-extended")
 
     // Core Android Libraries
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
-
-    // Material Design
-    implementation("com.google.android.material:material:1.9.0")
 
     // RecyclerView
     implementation("androidx.recyclerview:recyclerview:1.3.0")
@@ -79,7 +79,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")
 
     // WorkManager
-    implementation("androidx.work:work-runtime-ktx:2.8.0")
+    implementation("androidx.work:work-runtime-ktx:2.7.0")
 
     // Room Database
     implementation("androidx.room:room-runtime:2.5.2")

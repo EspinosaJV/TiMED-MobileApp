@@ -1,0 +1,98 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- TIMED Title Component -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="TIMED"
+        android:fontFamily="@font/rajdhani_bold"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- List of Medications Container -->
+    <View
+        android:id="@+id/orangeContainer"
+        android:layout_width="0dp"
+        android:layout_height="550dp"
+        android:background="@color/viewElementBackgroundColor"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Schedule Text at top left of Medications Container -->
+    <TextView
+        android:id="@+id/tvSchedule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Schedule"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondaryTextColor"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="@id/orangeContainer"
+        app:layout_constraintStart_toStartOf="@id/orangeContainer" />
+
+    <!-- Add Medications Button -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="72dp"
+        android:layout_height="28dp"
+        android:text="Add"
+        android:fontFamily="@font/PragmaticaMedium"
+        android:textColor="@color/secondaryTextColor"
+        android:background="@drawable/rounded_button"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toTopOf="@id/tvSchedule"
+        app:layout_constraintStart_toEndOf="@id/tvSchedule" />
+
+    <!-- Delete Medications Button -->
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="72dp"
+        android:layout_height="28dp"
+        android:text="Delete"
+        android:fontFamily="@font/PragmaticaMedium"
+        android:textColor="@color/secondaryTextColor"
+        android:background="@drawable/rounded_button"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toTopOf="@id/tvSchedule"
+        app:layout_constraintStart_toEndOf="@id/tvSchedule" />
+
+    <!-- RecyclerView that handles display of medications -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMedications"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="@id/orangeContainer"
+        app:layout_constraintBottom_toBottomOf="@id/orangeContainer"
+        app:layout_constraintStart_toStartOf="@id/orangeContainer"
+        app:layout_constraintEnd_toEndOf="@id/orangeContainer" />
+
+    <!-- Floating Action Button element for addition of new medication -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddMedication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Add Medication"
+        android:src="@drawable/timed_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

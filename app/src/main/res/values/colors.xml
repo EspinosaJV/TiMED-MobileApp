@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="primaryBackgroundColor">#FAB17D</color>
     <color name="secondaryTextColor">#CC7861</color>
+    <color name="viewElementBackgroundColor">#FCD0B1</color>
 </resources>
