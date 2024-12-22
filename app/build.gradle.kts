@@ -53,7 +53,8 @@ android {
 }
 
 dependencies {
-    
+    implementation("com.google.android.material:material:<latest_version>")
+
     // Compose BOM for consistent versions
     implementation(platform("androidx.compose:compose-bom:2024.04.00"))
     implementation("androidx.compose.ui:ui")
