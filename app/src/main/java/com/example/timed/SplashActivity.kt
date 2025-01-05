@@ -8,7 +8,8 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : AppCompatActivity()
+{
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +22,7 @@ class SplashActivity : AppCompatActivity() {
 
         // After 3 second delay, navigate to main activity
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MedicationActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)
