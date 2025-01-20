@@ -1,3 +1,13 @@
+import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.example.timed.Medication
+import com.example.timed.MedicationAdapter
+import com.example.timed.R
+
 class MedicationActivity : AppCompatActivity() {
 
     private lateinit var medicationAdapter: MedicationAdapter
@@ -5,12 +15,13 @@ class MedicationActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_medication_list) // Adjust with your layout resource
+        setContentView(R.layout.medication_list)
 
-        medicationList = mutableListOf() // Initialize the medication list
+        medicationList = mutableListOf()
+
+        Log.d("MedicationActivity", "Initial medication list size: ${medicationList.size}")
 
         medicationAdapter = MedicationAdapter(medicationList) { position ->
-            // Handle delete action
             medicationAdapter.deleteMedication(position)
         }
 
@@ -20,9 +31,10 @@ class MedicationActivity : AppCompatActivity() {
 
         val fabAddMedication: FloatingActionButton = findViewById(R.id.fabAddMedication)
         fabAddMedication.setOnClickListener {
-            // Sample data: You can change this to whatever data you want to add
             val newMedication = Medication("New Medication", "20mg")
             medicationAdapter.addMedication(newMedication)
+
+            Log.d("MedicationActivity", "Medication added. List size: ${medicationList.size}")
         }
     }
 }
