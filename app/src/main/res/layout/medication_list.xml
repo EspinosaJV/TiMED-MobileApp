@@ -38,7 +38,7 @@
         android:id="@+id/tvSchedule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:tet="Schedule"
+        android:text="Schedule"
         android:textSize="36sp"
         android:textStyle="bold"
         android:textColor="@color/secondaryTextColor"
